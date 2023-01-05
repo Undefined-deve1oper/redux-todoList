@@ -2,7 +2,7 @@ import axios from "axios";
 import { Dispatch } from "redux";
 import { IUser, UserAction, UserActionTypes } from "../../types/user";
 
-export const fetchTodos = () => async (dispatch: Dispatch<UserAction>) => {
+export const fetchUsers = () => async (dispatch: Dispatch<UserAction>) => {
     try {
         dispatch({ type: UserActionTypes.FETCH_USERS });
         const response = await axios.get<IUser[]>(
